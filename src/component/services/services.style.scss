@@ -1,0 +1,95 @@
+
+
+@mixin pattern{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.services{
+
+
+    &_nav{
+
+
+        &_desktop{
+          width: 30%;
+          display: flex;
+          justify-content: space-evenly;
+        }
+
+        &_mobile{
+          display: none;  
+
+
+        //   &_bot{
+
+        //   }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width:564px) {
+
+  .services{
+
+
+    &_nav{
+
+
+        &_desktop{
+          display: none;
+        }
+
+        &_mobile{
+          display: block;  
+
+          h3{
+            font-size: 1rem;
+            text-align: center;
+          }
+
+
+          &_bot, &_customer{
+             @include pattern;
+              
+            &_image{
+
+
+              &_layer{
+                width: 90%;
+                height: 9rem;
+                background-color: #2a2a2a;
+                position: absolute;
+                opacity: 0.5;
+                
+              }
+              &_text{
+                height: 8rem;
+                padding: 0.5rem 0rem;
+                text-align: center;
+                position: relative;
+                color: #fff;
+
+                h3{
+                  font-size: 1rem;
+
+                }
+
+                p{
+                  font-size: 0.7em;
+                
+
+                }
+              }
+            }
+
+          }
+
+
+        }
+    }
+
+}
+}

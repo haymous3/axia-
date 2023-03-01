@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import {Routes, Route} from 'react-router-dom'
+import HomePage from './routes/Home_Page/Home_Page.componet';
+import SignUpAndSignInPage from './routes/Sign_Up&Sign_In_Page/Sign_Up&Sign_In.component';
+import ShoppingPage from './routes/Shopping_Page/Shopping_Page.component';
+// import ShopCard from './component/shop_card/shop_card.component';
 
-function App() {
+const App = () =>  {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+
+      <Route path='/' element={<HomePage/>}>
+        
+      </Route>
+      <Route path='register' element={<SignUpAndSignInPage/>}/> 
+      <Route path='shop/*' element={<ShoppingPage/>}/>
+      
+      
+      
+    
+    </Routes>
   );
 }
 
 export default App;
+

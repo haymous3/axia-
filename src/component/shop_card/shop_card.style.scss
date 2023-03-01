@@ -1,0 +1,22 @@
+
+
+.shopCard{
+    display: flex;
+
+    &_display{
+        width: 80%;
+        margin-left: 18%;
+    }
+}
+
+@media only screen and (max-width:564px) {
+    .shopCard{
+        flex-direction: column-reverse;
+
+
+        &_display{
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}

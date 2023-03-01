@@ -1,0 +1,22 @@
+
+
+.pageTitle{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    width: 100%;
+    align-items: center;
+    height: fit-content;
+}
+
+
+@media only screen and (max-width:564px) {
+
+    .pageTitle {
+
+          
+        h3{
+            display: none;
+        }
+    }
+}

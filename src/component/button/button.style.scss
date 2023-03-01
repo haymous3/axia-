@@ -1,0 +1,57 @@
+$black_color: #130E0E;
+$white_color: #fff;
+$red_color: #C0612C;
+$blue_color: #44269A;
+
+
+@mixin buttons {
+    padding: 8px;
+    width: 327px;
+    height: 48px;
+    border-radius: 4px;
+    font-family: Manrope
+}
+
+@mixin bot{
+    width: 100% !important;
+    margin-bottom: 5rem;
+    display: block;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-right: auto;
+}
+
+
+
+.sign_up_with_google{
+    @include buttons;
+    background-color: $black_color;
+    color: $white_color;
+}
+
+.sign_in{
+    @include buttons;
+    background-color: $white_color;
+    color: $black_color;
+}
+
+.chat_with_bot{
+   
+    @include buttons;
+    background-color: $red_color;
+    color: $white_color;
+    border: 1px solid $red_color;
+   @include bot
+
+
+}
+
+.customer_service{
+    @include buttons;
+    background-color: $blue_color;
+    color: $white_color;
+    border: 1px solid $blue_color;
+    @include bot;
+   
+
+}

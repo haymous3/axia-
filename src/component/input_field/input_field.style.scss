@@ -1,0 +1,23 @@
+
+
+
+
+.searchBox{
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    width: 25rem;
+    height: 2.9rem;
+    outline: none;
+    padding-left: 1rem;
+    border-radius: 3px;
+}
+
+
+@media only screen and (max-width:564px) {
+
+    .searchBox{
+        width: 12rem;
+        background-color: #fff;
+        border-radius: 3px;
+    }
+}

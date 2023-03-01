@@ -1,0 +1,103 @@
+$opacity_bg: #54FE5014;
+
+
+@mixin opacity_properties{
+    background-color: $opacity_bg;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    position: absolute;
+    left: 35%;
+}
+@mixin opacity_properties_queries {
+    width: 212px;
+height: 212px;
+border-radius: 50%;
+position: absolute;
+left: 19%;
+margin-top: 56px;
+}
+
+
+@mixin section_paddings{
+    padding: 2rem 0.5rem;
+}
+
+.registration_page{
+    text-align: center;
+    height: 100vh;
+    @include section_paddings;
+
+
+
+    .registration_img{
+       
+
+        .registration_opacity_bg{
+            @include opacity_properties;
+        }
+
+        img{
+            position: relative;
+            margin-top: 7.5em;
+            
+        }
+    }
+
+    .registration_btns{
+        width: 22%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 8rem;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (max-width:564px){
+
+    .registration_page{
+        text-align: center;
+        height: 100vh;
+        @include section_paddings;
+    
+    
+    
+        .registration_img{
+           
+    
+            .registration_opacity_bg{
+                @include opacity_properties_queries;
+            }
+    
+            img{
+                position: relative;
+                margin-top: 7.5em;
+                width: 100%;
+                
+            }
+        }
+    
+        .registration_btns{
+            width: 60%;
+       
+        }
+    }
+
+    
+    
+}
+
+@media only screen and (max-width:1024px) {
+
+    .registration_page{
+
+        .registration_btns{
+            width: 54%
+       
+        }
+    }
+
+  
+    
+}

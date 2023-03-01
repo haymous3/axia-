@@ -1,0 +1,27 @@
+
+
+.categoryView{
+
+    h2{
+        padding-left: 3rem;
+    }
+   
+    .categoryView_product{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+}
+
+@media only screen and (max-width:564px) {
+    .categoryView{
+        h2{
+        
+                padding-left: 1rem;
+                font-size: 20px;
+            
+        }
+    }
+    
+}
