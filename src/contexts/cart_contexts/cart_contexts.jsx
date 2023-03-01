@@ -1,10 +1,10 @@
-import { createContext, useState } from "react";
+// import { createContext, useState } from "react";
 
 
 
-export const CartContexts = createContext(
-    {
-        cartItem: {},
-        addToCart: () => {}
-    }
-)
+// export const CartContexts = createContext(
+//     {
+//         cartItem: {},
+//         addToCart: () => {}
+//     }
+// )
