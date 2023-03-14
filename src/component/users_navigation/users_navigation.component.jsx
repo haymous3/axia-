@@ -6,16 +6,12 @@ const UsersNavigation = () => {
 
     const [subLinks, setSubLinks] = useState(false)
 
-    // const navigate = useNavigate();
-
-    // const goToService = () => {
-    //     navigate('shop/services')
-    // }
+   
 
 
     const displaySubLinks = () => {
         setSubLinks(!subLinks)
-        // goToService()
+       
 
     }
    
@@ -26,7 +22,7 @@ const UsersNavigation = () => {
                 <h4>Logo</h4>
                 <Link to='home'>Home</Link>
                 <Link to='discount'>Discount</Link>
-                <Link to='cart'>My Cart</Link>
+                <Link to='mycart'>My Cart</Link>
                 <Link to='notification'>Notification</Link>
                 <Link onClick={displaySubLinks} to="services">Customer Service</Link>
                 {

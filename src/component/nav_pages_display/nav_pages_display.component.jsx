@@ -19,7 +19,7 @@ const NavPagesDisplay = () => {
 
             {
                 navPagesDisplay === 'home' ? <Categories/> :
-                 navPagesDisplay === 'cart' ? <MyCart/> : 
+                 navPagesDisplay === 'mycart' ? <MyCart/> : 
                  navPagesDisplay === 'services' ? <Services/>:
                  navPagesDisplay === 'bot' ? <ChatDirectories chatTypes={navPagesDisplay}/>:
                  navPagesDisplay  ? <EachCategories/> : null
