@@ -25,9 +25,9 @@ const UsersNavigation = () => {
             <div className='user_links_desktop'>
                 <h4>Logo</h4>
                 <Link to='home'>Home</Link>
-                <Link to='cart'>Discount</Link>
+                <Link to='discount'>Discount</Link>
                 <Link to='cart'>My Cart</Link>
-                <Link to='cart'>Notification</Link>
+                <Link to='notification'>Notification</Link>
                 <Link onClick={displaySubLinks} to="services">Customer Service</Link>
                 {
                     subLinks ? <Link to='bot'  >Bot</Link> : null

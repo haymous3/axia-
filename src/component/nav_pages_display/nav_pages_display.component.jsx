@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom"
 import Categories from "../categories/categories.component"
-import SignUpAndSignInPage from "../../routes/Sign_Up&Sign_In_Page/Sign_Up&Sign_In.component";
+// import SignUpAndSignInPage from "../../routes/Sign_Up&Sign_In_Page/Sign_Up&Sign_In.component";
 import Services from "../services/services.component";
+import MyCart from "../my_carts/my_carts.component";
 import ChatDirectories from "../chat_directories/chat_directories.component";
 import EachCategories from "../each_categories/each_categories.component";
 
@@ -18,7 +19,7 @@ const NavPagesDisplay = () => {
 
             {
                 navPagesDisplay === 'home' ? <Categories/> :
-                 navPagesDisplay === 'cart' ? <SignUpAndSignInPage/> : 
+                 navPagesDisplay === 'cart' ? <MyCart/> : 
                  navPagesDisplay === 'services' ? <Services/>:
                  navPagesDisplay === 'bot' ? <ChatDirectories chatTypes={navPagesDisplay}/>:
                  navPagesDisplay  ? <EachCategories/> : null
