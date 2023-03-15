@@ -1,5 +1,8 @@
+
+
+
 .step{
-    background-color: white;
+    background-color: #ccc;
     color: black;
     font-size: 12px;
     text-align: center;
@@ -16,16 +19,17 @@
     p{
         position: absolute;
         top: 30px;
-       
-        color: #000;
+       font-weight: 300;
+        color: #ccc;
     }
     &.completed{
-        background-color: #c92c61;
-        color: white;
+        background-color: #fff;
+        color: #000;
 
         p{
-            color: white;
+            color: #fff;
             font-size: 15px;
+            font-weight: 300;
         }
     }
 

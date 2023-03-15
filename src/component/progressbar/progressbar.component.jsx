@@ -1,17 +1,17 @@
-import React from "react";
+// import React from "react";
+
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
-
 import './progressbar.style.scss'
  
-const CartProgressBar = ({index}) => {
+const CartProgressBar = ({steps}) => {
  
     return (
         
         <ProgressBar
-        percent={(index - 1) * 100/ 3}
-        filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
-        >
+        percent={(steps - 1) * 100 / 3}
+        filledBackground="linear-gradient(to right, #fafafa, #fff)"
+      >
             <Step transition="scale">
             {({ accomplished, index}) => (
                 <span className={`step ${accomplished ? 'completed' : ""}`}>
@@ -22,18 +22,26 @@ const CartProgressBar = ({index}) => {
             )}
             </Step>
             <Step transition="scale">
-            {({ accomplished }) => (
+            {({ accomplished, index }) => (
                 <span className={`step ${accomplished ? 'completed' : ""}`}>
                     2
-                    <p>Cart</p>
+                    <p>Your Details</p>
                 </span>
             )}
             </Step>
             <Step transition="scale">
-            {({ accomplished }) => (
+            {({ accomplished, index }) => (
                 <span className={`step ${accomplished ? 'completed' : ""}`}>
                     3
-                    <p>Cart</p>
+                    <p>Make Payment</p>
+                </span>
+            )}
+            </Step>
+            <Step transition="scale">
+            {({ accomplished, index }) => (
+                <span className={`step ${accomplished ? 'completed' : ""}`}>
+                    4
+                    <p>Review</p>
                 </span>
             )}
             </Step>

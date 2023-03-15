@@ -8,7 +8,7 @@ import './my_carts.style.scss'
 
 const MyCart = () => {
 
-    const [index, setIndex] = useState(1)
+    const [index, setIndex] = useState(2)
 
     const {cartItem} = useContext(CartContexts)
 
@@ -22,7 +22,7 @@ const MyCart = () => {
 
     const previousBtn = () => {
         if(index > 1){
-            setIndex(previousButton => previousButton + 1)
+            setIndex(previousButton => previousButton - 1)
         }
     }
 
@@ -35,31 +35,16 @@ const MyCart = () => {
     return(
         <div className='cart'>
            <div className='cart_progress'>
-               
+                <h3>{index === 1 ? 'My Cart' : index === 2 ? 'My Details' : index === 3 ? 'Make Payment' : index === 4 ? 'Review your Cart' : null}</h3>
                 <CartProgressBar steps={index}/>
            </div>
 
-           <CartMultistepProcess/>
+           <CartMultistepProcess steps={index}/>
            
             <div className='cart_btns'>
 
-                {
-                    (index === 2) ?
-                        <div>
-                            <Button eventFunction={previousBtn}></Button>
-                            <Button eventFunction={nextBtn}></Button>
-                        </div>
-                        
-                    : (index === 3) ? 
-                        <div>
-                        <Button eventFunction={previousBtn}></Button>
-                        <Button eventFunction={nextBtn}></Button>
-                        </div>
-
-                    :null
-
-                    
-                }
+               <Button eventFunction={previousBtn}>BACT TO {index === 2 ? 'YOUR CART' : index === 3 ? 'YOUR DETAILS' : index === 4 ? 'MAKE PAYMENT' : null}</Button>
+               <Button eventFunction={nextBtn}>PROCEED TO {index === 2 ? 'YOUR DETAILS' : index === 3 ? 'MAKE PAYMENT' : index === 4 ? 'REVIEW CART' : null}</Button>
 
             
             </div>

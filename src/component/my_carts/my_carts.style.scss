@@ -1,0 +1,36 @@
+
+$cart_progress: rgba(55,63,80, 1);
+$white_color: #ffffff;
+
+
+.cart{
+
+
+
+    &_progress{
+        height: 13rem;
+        background-color: $cart_progress!important;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+        h3{
+            width: 100%;
+            color: $white_color;
+            margin-left: 3rem;
+            font-size: 1.5rem;
+        }
+
+        >:nth-child(2){
+            width: 50% !important;
+            left: 3rem;
+            height: 3px;
+            top: -1rem;
+            margin-bottom: 3rem;
+            
+        }
+    }
+
+
+}
