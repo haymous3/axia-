@@ -2,6 +2,7 @@ $black_color: #130E0E;
 $white_color: #fff;
 $red_color: #C0612C;
 $blue_color: #44269A;
+$cart_btn_primary: #373f50;
 
 
 @mixin buttons {
@@ -54,4 +55,18 @@ $blue_color: #44269A;
     @include bot;
    
 
+}
+
+.increase_Cart_Btn{
+    background-color: #fff;
+    border: 1px solid #373f50;
+    width: 60%;
+    justify-content: space-between;
+    height: 16%;
+    font-size: 1.3rem;
+    align-items: center;
+    padding: 0rem 1rem;
+    display: flex;
+    border-radius: 0.3rem;
+    margin: 0 auto;
 }

@@ -1,0 +1,101 @@
+$white_color: #fff;
+$note: rgba(105, 179, 254, 1);
+$border_color: #dde4eb;
+$fore_color:  #373f50;
+
+
+@mixin borderColor {
+    border: 1px solid $border_color;
+}
+
+
+.order_summary_one{
+
+
+
+    &_title{
+        text-align: center;
+        color: $fore_color;
+    }
+
+    &_comment{
+        >:first-child{
+            display: flex;
+            align-items: center;
+           >:first-child{
+            background-color: $note;
+            padding: 0.4rem;
+            color: $white_color;
+            margin-right: 1rem;
+           } 
+           >:last-child{
+             color: $fore_color;
+           }
+
+        }
+
+        >:last-child{
+            width: 100%;
+            height: 10rem;
+            margin-bottom: 2rem;
+
+          textarea{
+            width: 100%;
+            height: 100%;
+            @include borderColor();
+          }
+        }
+    }
+
+    &_promo{
+      @include borderColor;
+       
+
+
+        &_title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            height: 3rem;
+            border-collapse: collapse;
+            @include borderColor;
+
+
+            h4{
+                font-size: 1rem;
+                color: $fore_color;
+            }
+
+            div{
+                i{
+                    font-size: 1.3rem;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 30px;
+                    width: 30px;
+                    background-color: #f3f5f9;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+        &_code{
+            padding: 1rem;
+
+            line-height: 2rem;
+
+            input{
+                width: 100%;
+                height: 2rem;
+                @include borderColor;
+
+            }
+        }
+    }
+ 
+
+}

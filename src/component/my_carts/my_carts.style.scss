@@ -24,12 +24,17 @@ $white_color: #ffffff;
 
         >:nth-child(2){
             width: 50% !important;
-            left: 3rem;
+            left: 4rem;
             height: 3px;
             top: -1rem;
             margin-bottom: 3rem;
             
         }
+    }
+
+    &_summaries{
+        display: flex;
+        justify-content: space-between;
     }
 
 

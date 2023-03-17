@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { CartContexts } from '../../contexts/cart_contexts/cart_contexts'
 import './users_navigation.style.scss'
 
 const UsersNavigation = () => {
 
     const [subLinks, setSubLinks] = useState(false)
 
-   
+   const {cartItemQuantity} = useContext(CartContexts)
 
+//    console.log(cartItemQuantity)
 
     const displaySubLinks = () => {
         setSubLinks(!subLinks)
@@ -22,7 +24,13 @@ const UsersNavigation = () => {
                 <h4>Logo</h4>
                 <Link to='home'>Home</Link>
                 <Link to='discount'>Discount</Link>
-                <Link to='mycart'>My Cart</Link>
+                <Link to='mycart'>My Cart 
+
+                {
+                   cartItemQuantity ? <span>{cartItemQuantity}</span> : null
+                }
+                 
+                </Link>
                 <Link to='notification'>Notification</Link>
                 <Link onClick={displaySubLinks} to="services">Customer Service</Link>
                 {
@@ -41,7 +49,12 @@ const UsersNavigation = () => {
                 </div>
                 <div className='user_links_mobile_cart'>
                     <i class='bx bx-cart' ></i>
-                    <Link to='cart'>Cart</Link>
+                    <Link to='mycart'>Cart
+                        <span>
+                            {cartItemQuantity}
+                        </span> 
+                    
+                    </Link>
                 </div>
                 <div className='user_links_mobile_help'>
                     <i class='bx bx-message' ></i>

@@ -1,18 +1,22 @@
 import { useContext, useState } from 'react';
-import { CartContexts } from '../../contexts/cart_contexts/cart_contexts';
+
 import CartProgressBar from '../progressbar/progressbar.component';
-import CartMultistepProcess from '../cart_multistep_process/cart_multistep_process.component';
+import { CartMultistepProcessContexts } from '../../contexts/cart_multistep_process_contexts/cart_multistep_process_contexts';
+import CartOrderSummary from '../cart_order_summary/cart_order_summary.component';
+import CartProcesses from '../cart_multistep_process/cart_multistep_process.component';
 import Button from '../button/button.component';
 import './my_carts.style.scss'
 
 
 const MyCart = () => {
 
-    const [index, setIndex] = useState(2)
+    const [index, setIndex] = useState(1)
 
-    const {cartItem} = useContext(CartContexts)
+   
+    const {cartProcess} = useContext(CartMultistepProcessContexts)
+    
 
-    console.log(cartItem)
+    console.log(cartProcess)
 
     const nextBtn = () => {
         if(index < 4){
@@ -27,19 +31,18 @@ const MyCart = () => {
     }
 
   
-
-   
-
-
-
     return(
         <div className='cart'>
            <div className='cart_progress'>
                 <h3>{index === 1 ? 'My Cart' : index === 2 ? 'My Details' : index === 3 ? 'Make Payment' : index === 4 ? 'Review your Cart' : null}</h3>
                 <CartProgressBar steps={index}/>
            </div>
-
-           <CartMultistepProcess steps={index}/>
+           <div className='cart_summaries'>
+                <CartProcesses steps={index} processes={cartProcess}/>
+                <CartOrderSummary steps={index}/>
+           </div>
+           
+         
            
             <div className='cart_btns'>
 
@@ -48,7 +51,7 @@ const MyCart = () => {
 
             
             </div>
-        
+            
         </div>
     )
 }

@@ -4,7 +4,8 @@ const  BUTTON_TYPES = {
     signupwithgoogle: 'sign_up_with_google',
     signin:'sign_in',
     chatwithbot:'chat_with_bot',
-    customerservice:'customer_service'
+    customerservice:'customer_service',
+    increaseCartBtn: 'increase_Cart_Btn'
 }
 
 

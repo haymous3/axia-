@@ -1,0 +1,26 @@
+
+
+.alert{
+
+    animation: alertss 2s ease-in-out;
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+
+    display: block;
+
+}
+
+@keyframes alerts {
+    0% {
+        display: block;
+    }
+
+    100%{
+      display: none ;
+    }
+    
+}
