@@ -39,15 +39,22 @@ const MyCart = () => {
            </div>
            <div className='cart_summaries'>
                 <CartProcesses steps={index} processes={cartProcess}/>
-                <CartOrderSummary steps={index}/>
+                <CartOrderSummary steps={index} nextBtn={nextBtn}/>
            </div>
            
          
            
             <div className='cart_btns'>
 
-               <Button eventFunction={previousBtn}>BACT TO {index === 2 ? 'YOUR CART' : index === 3 ? 'YOUR DETAILS' : index === 4 ? 'MAKE PAYMENT' : null}</Button>
-               <Button eventFunction={nextBtn}>PROCEED TO {index === 2 ? 'YOUR DETAILS' : index === 3 ? 'MAKE PAYMENT' : index === 4 ? 'REVIEW CART' : null}</Button>
+                {
+                    index === 1 ? null :
+                    <div>
+                    <Button eventFunction={previousBtn}>BACT TO {index === 2 ? 'YOUR CART' : index === 3 ? 'YOUR DETAILS' : index === 4 ? 'MAKE PAYMENT' : null}</Button>
+                    <Button eventFunction={nextBtn}>PROCEED TO {index === 2 ? 'YOUR DETAILS' : index === 3 ? 'MAKE PAYMENT' : index === 4 ? 'REVIEW CART' : null}</Button>
+                    </div>
+
+                }
+              
 
             
             </div>

@@ -36,22 +36,23 @@ const CartMultistepProcess = [
             },
             {
                 label:'State',
-                type:'select',
+                type:'selects',
                 options: [
                     {
                         state:'Lagos',
                         lga: ['Agege', 'Oshodi', 'Mushin', 'Ayobo', 'Ikeja']
                     },
                     {
-                        country: 'Ogun',
-                        state: ['Abeokuta', 'Otta', 'Ayetoro', 'Itele', 'Atan']
+                        state: 'Ogun',
+                        lga: ['Abeokuta', 'Otta', 'Ayetoro', 'Itele', 'Atan']
                     },
                     {
-                        conutry: 'Osun',
-                        state: ['Oshobo', 'Iree', 'Iwo', 'Ila', 'Ife']
+                        state: 'Osun',
+                        lga: ['Oshobo', 'Iree', 'Iwo', 'Ila', 'Ife']
                     }
                 ]
             },
+           
             {
                 label:'Zip Code',
                 type: 'number',
@@ -79,11 +80,6 @@ const CartMultistepProcess = [
 ]
 
     
-
-
-
-
-
 
 
 

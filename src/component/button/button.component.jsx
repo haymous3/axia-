@@ -5,7 +5,9 @@ const  BUTTON_TYPES = {
     signin:'sign_in',
     chatwithbot:'chat_with_bot',
     customerservice:'customer_service',
-    increaseCartBtn: 'increase_Cart_Btn'
+    increaseCartBtn: 'increase_Cart_Btn',
+    promoCode:'promo_code',
+    checkout: 'check_out'
 }
 
 

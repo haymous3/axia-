@@ -3,6 +3,9 @@ $white_color: #fff;
 $red_color: #C0612C;
 $blue_color: #44269A;
 $cart_btn_primary: #373f50;
+$border_color: #dde4eb;
+$fore_color:  #373f50;
+$shadow: rgba(254, 105, 106, 0.9);
 
 
 @mixin buttons {
@@ -69,4 +72,53 @@ $cart_btn_primary: #373f50;
     display: flex;
     border-radius: 0.3rem;
     margin: 0 auto;
+}
+
+
+.promo_code{
+    width: 100%;
+    height: 3rem;
+    background-color: $white_color;
+    margin-top: 1rem;
+    border: 1px solid $border_color;
+    color: $fore_color;
+    font-family: bold;
+}
+
+.promo_code:hover{
+    color: #C0612C;
+    font-size: 1rem;
+}
+
+
+.check_out{
+   
+        box-shadow: 0 .5rem 1.125rem -.5rem $shadow;
+        width: 100%;
+        height: 3rem;
+        background-color: $shadow;
+        color: $white_color;
+        border: none;
+        font-family: Manrope;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bolder;
+
+
+
+        i{
+            font-size: 1.2rem;
+            padding-right: 0.9rem;
+        }
+    
+}
+
+
+.check_out:hover{
+    box-shadow: none;
+    background-color: #fe4042;
 }
