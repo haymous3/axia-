@@ -9,7 +9,7 @@ const CartOrderSummary = ({steps, nextBtn}) => {
     return(
         <div className='cart_order_summary'>
             {
-                steps === 1 ? <CartOrderSummaryOne steps={steps} nextBtn={nextBtn}/> : steps === 2 || 3 ? <CartOrderSummaryTwoAndThree/> : steps === 4 ? <CartOrderSummaryFour/>: null
+                steps === 1 ? <CartOrderSummaryOne steps={steps} nextBtn={nextBtn}/> : steps === 2 || 3 ? <CartOrderSummaryTwoAndThree /> : steps === 4 ? <CartOrderSummaryFour/>: null
             }        
         </div>
     )

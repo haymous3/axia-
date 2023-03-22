@@ -6,10 +6,6 @@ const CartDetails = ({details}) => {
     const [lga, setLga] = useState([])
 
 
-    
-
- 
-
     const selectedValue = (event) => {
 
         setLga(event.target.value)
@@ -73,8 +69,8 @@ const CartDetails = ({details}) => {
 
             details.type === 'selects' ? 
 
-            <div className='cart_details_input'>
-                <label>{details.label}</label>
+            <div className='cart_details_input select'>
+                <label>{details.label}</label><br/>
                 <select onChange={selectedValue}>
 
                   {

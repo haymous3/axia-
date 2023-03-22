@@ -1,6 +1,30 @@
+$text_color:#373f50;
+
 
 .cartprocesses{
     width: 60%;
     display: flex;
     flex-wrap: wrap;
+
+   
+
+
+    &_title{
+        text-align: left;
+        width: 100%;
+        padding-left: 1rem;
+        margin-top: 2rem;
+       
+
+        h3{
+            border-bottom: 1px solid #e3e9ef;
+            padding-bottom: 1rem;
+            width: 93%;
+            font-size: 1rem;
+            color:$text_color;
+        }
+    }
+
+
+   
 }

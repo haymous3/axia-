@@ -13,10 +13,11 @@ const MyCart = () => {
     const [index, setIndex] = useState(1)
 
    
-    const {cartProcess} = useContext(CartMultistepProcessContexts)
+    const {cartProcess} = useContext(CartMultistepProcessContexts);
+ 
     
 
-    console.log(cartProcess)
+   
 
     const nextBtn = () => {
         if(index < 4){

@@ -5,32 +5,32 @@ import { CartContexts } from "../cart_contexts/cart_contexts";
 const CartMultistepProcess = [
 
     {
-        process_one:1,
+        process:1,
         processDetailsOne: []
     },
 
     {
-        process_two:2,
+        process:2,
         processDetailsTwo: [
 
             {
-                label:'firstname',
+                label:'First Name',
                 type:'text'
             },
             {
-                label:'lastname',
+                label:'Last Name',
                 type:'text'
             },
             {
-                label:'email addresss',
+                label:'Email Addresss',
                 type:'email'
             },
             {
-                label:'phone number',
+                label:'Phone Number',
                 type:'number'
             },
             {
-                label: 'country',
+                label: 'Country',
                 type: 'select',
                 options: ['Nigeria']
             },
@@ -67,13 +67,13 @@ const CartMultistepProcess = [
         ]
     },
     {
-        process_three:'3',
+        process:'3',
         processDetailsThree:[
 
         ]
     },
     {
-       process_four: '4',
+       process: '4',
        processDetailsOne:[]  
     }
 

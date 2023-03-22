@@ -12,16 +12,14 @@ const CartProcesses  = ({steps, processes}) => {
 
             {
                 steps === 2 ? 
-                <div style={{
-                    width:'100%'
-                }}>
-                <h3>Shipping Details</h3> 
+                <div className="cartprocesses_title">
+                    <h3>Shipping Details</h3> 
                 </div>
                 
                 : null
-            }<br/>
-            {processes[steps - 1].hasOwnProperty('processDetailsOne') ? processes[steps - 1].processDetailsOne.map((product) => <CartProduct key={product.process_one} product={product}/>): 
-            processes[steps - 1].hasOwnProperty('processDetailsTwo') ? processes[steps-1].processDetailsTwo.map((details) => <CartDetails key={details.label} details={details}/>): 
+            }
+            {processes[steps - 1].hasOwnProperty('processDetailsOne') ? processes[steps - 1].processDetailsOne.map((product) => <CartProduct key={product.process} product={product}/>): 
+            processes[steps - 1].hasOwnProperty('processDetailsTwo') ? processes[steps-1].processDetailsTwo.map((details) => <CartDetails key={details.process} details={details}/>): 
             
             
             null 
