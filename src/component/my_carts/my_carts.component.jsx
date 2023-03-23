@@ -49,9 +49,9 @@ const MyCart = () => {
 
                 {
                     index === 1 ? null :
-                    <div>
-                    <Button eventFunction={previousBtn}>BACT TO {index === 2 ? 'YOUR CART' : index === 3 ? 'YOUR DETAILS' : index === 4 ? 'MAKE PAYMENT' : null}</Button>
-                    <Button eventFunction={nextBtn}>PROCEED TO {index === 2 ? 'YOUR DETAILS' : index === 3 ? 'MAKE PAYMENT' : index === 4 ? 'REVIEW CART' : null}</Button>
+                    <div className='cart_btns_btns'>
+                    <Button eventFunction={previousBtn} buttontype=''>BACT TO {index === 2 ? 'YOUR CART' : index === 3 ? 'YOUR DETAILS' : index === 4 ? 'MAKE PAYMENT' : null}</Button>
+                    <Button eventFunction={nextBtn} buttontype='checkout'>PROCEED TO {index === 2 ? 'YOUR DETAILS' : index === 3 ? 'MAKE PAYMENT' : index === 4 ? 'REVIEW CART' : null}</Button>
                     </div>
 
                 }

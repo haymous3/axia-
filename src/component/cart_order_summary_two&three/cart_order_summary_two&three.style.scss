@@ -1,0 +1,36 @@
+$text_color: #4b566b;
+$border_color: #e3e9ef;
+
+.cart_order_summary_two_three{
+
+
+        &_summary{
+            line-height: 0rem;
+            border-bottom: 1px solid $border_color;
+
+            &_details{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 3rem;
+                color: $text_color;
+            }
+        }
+
+        &_overall{
+
+            text-align: center;
+        }
+
+
+        &_promo{
+            margin-top: 1rem;
+
+            input{
+                width: 89%;
+                height: 3rem;
+                border: 1px solid $border_color;
+                padding-left: 2rem;
+            }
+        }
+
+}

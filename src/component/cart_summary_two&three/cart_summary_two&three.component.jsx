@@ -2,7 +2,11 @@
 import './cart_summary_two&three.style.scss'
 const CartSummaryTwoAndThree = ({product}) => {
 
+
+   
     const {name, quantity, image, price} = product
+
+
 
     return(
 
@@ -21,7 +25,7 @@ const CartSummaryTwoAndThree = ({product}) => {
               
             </div>
             
-        
+         
         </div>
     )
 }

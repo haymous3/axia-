@@ -82,12 +82,13 @@ $shadow: rgba(254, 105, 106, 0.9);
     margin-top: 1rem;
     border: 1px solid $border_color;
     color: $fore_color;
-    font-family: bold;
+    font-family: Manrope;
 }
 
 .promo_code:hover{
-    color: #C0612C;
+    color: $white_color;
     font-size: 1rem;
+    background-color: #C0612C;
 }
 
 

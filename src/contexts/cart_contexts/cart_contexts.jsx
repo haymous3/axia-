@@ -63,7 +63,9 @@ export const CartContexts = createContext(
         cartItemQuantity: 0,
         reItemQuantity: () => {},
         deleteItem : () => {},
-        totalAmount: 0
+        totalAmount: 0,
+        taxes: 0,
+        overallAmount: 0
 
     }
 )
@@ -71,9 +73,11 @@ export const CartContexts = createContext(
 
 export const CartProvider = ({children}) => {
 
-        const [cartItem, setCartItem] = useState([]);
+        const [cartItem, setCartItem] = useState([]); 
         const [cartItemQuantity, setCartItemQuantiy] = useState(0)
         const [totalAmount, setTotalAmount] = useState(0)
+        const [taxes, setTaxes] = useState(0)
+        const [overallAmount, setOverallAmount] = useState(0)
 
 
         useEffect(() => {
@@ -93,6 +97,21 @@ export const CartProvider = ({children}) => {
             
 
         }, [cartItem])
+
+        useEffect(() => {
+
+            const taxepayment = 10/100 * totalAmount
+
+            setTaxes(taxepayment)
+
+        }, [totalAmount])
+
+
+        useEffect(() => {
+
+            const overall = totalAmount + taxes
+            setOverallAmount(overall)
+        }, [totalAmount, taxes])
 
        
 
@@ -125,7 +144,7 @@ export const CartProvider = ({children}) => {
 
 
             // console.log(cartItem.length, cartItemQuantity)
-        const value = {cartItem, cartItemQuantity, addToCart, increment, decrement, deleteItem, totalAmount}
+        const value = {cartItem, cartItemQuantity, addToCart, increment, decrement, deleteItem, totalAmount, taxes, overallAmount}
  
     return <CartContexts.Provider value={value}>{children}</CartContexts.Provider>
 }
