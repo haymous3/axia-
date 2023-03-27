@@ -39,10 +39,15 @@ const increaseQuantity = (cartitem, product) => {
 const decreaseQuantity = (cartitem, product) => {
     const existingProduct =  cartitem.find((item) => item.id === product.id)
 
-    if(existingProduct){
-        return cartitem.filter((item) => item.quantity > 1).map((item) => item.id === product.id ? 
-        {...item, quantity: item.quantity -1 }: item)
+    if(existingProduct.quantity === 1){
+        return cartitem.filter((item) => (item.id !== product.id)) 
+       
     }
+
+    return cartitem.map((item) => item.id === product.id ?
+    {...item, quantity: item.quantity - 1}
+    :
+    item)
 }
 
 const deleteItems = (cartitem, product) => {

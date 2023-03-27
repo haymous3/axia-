@@ -37,40 +37,7 @@ $white_color: #ffffff;
         justify-content: space-between;
     }
 
-    &_btns{
-        width: 60%;
-
-        &_btns{
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            align-items: center;
-
-
-            >:nth-child(1){
-                width: 45%;
-                background-color: $border_color;
-                border: 1px solid $border_color;
-                height: 3rem;
-                border-radius: 0.5rem;
-                margin: 1rem;
-               
-
-
-            }
-
-           
-
-            >:nth-child(2){
-                width: 45%;
-                font-weight: 600;
-                height: 3rem;
-                margin-bottom: 1rem;
-                
-            }
-        }
-    }
+    
 
 
 }

@@ -1,0 +1,38 @@
+
+
+.cart_payment{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0.3rem 1.525rem -0.375rem rgba(0, 0, 0, 0.1);
+    width: 100%;
+    align-items: center;
+    margin: 2rem;
+    height: 14rem;
+
+
+    &_account, &_bought, &_balance{
+        border-right: 1px solid #e3e9ef;
+        width: 35%;
+        text-align: center;
+        height: 100%;
+        line-height: 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        h4{
+            width: 100%;
+            
+         }
+
+         >:nth-child(2){
+            color: #4e54c8;
+         }
+
+
+
+    }
+
+}
+

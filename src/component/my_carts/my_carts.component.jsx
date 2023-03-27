@@ -4,7 +4,7 @@ import CartProgressBar from '../progressbar/progressbar.component';
 import { CartMultistepProcessContexts } from '../../contexts/cart_multistep_process_contexts/cart_multistep_process_contexts';
 import CartOrderSummary from '../cart_order_summary/cart_order_summary.component';
 import CartProcesses from '../cart_multistep_process/cart_multistep_process.component';
-import Button from '../button/button.component';
+
 import './my_carts.style.scss'
 
 
@@ -39,26 +39,13 @@ const MyCart = () => {
                 <CartProgressBar steps={index}/>
            </div>
            <div className='cart_summaries'>
-                <CartProcesses steps={index} processes={cartProcess}/>
+                <CartProcesses steps={index} processes={cartProcess} nextBtn={nextBtn} previousBtn={previousBtn}/>
                 <CartOrderSummary steps={index} nextBtn={nextBtn}/>
            </div>
            
          
            
-            <div className='cart_btns'>
-
-                {
-                    index === 1 ? null :
-                    <div className='cart_btns_btns'>
-                    <Button eventFunction={previousBtn} buttontype=''>BACT TO {index === 2 ? 'YOUR CART' : index === 3 ? 'YOUR DETAILS' : index === 4 ? 'MAKE PAYMENT' : null}</Button>
-                    <Button eventFunction={nextBtn} buttontype='checkout'>PROCEED TO {index === 2 ? 'YOUR DETAILS' : index === 3 ? 'MAKE PAYMENT' : index === 4 ? 'REVIEW CART' : null}</Button>
-                    </div>
-
-                }
-              
-
             
-            </div>
             
         </div>
     )
